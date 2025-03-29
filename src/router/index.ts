@@ -4,10 +4,17 @@ import { useRootStore } from "@/stores/store";
 import Dashboard from "@/domain/account/components/Dashboard.vue";
 import Login from "@/domain/account/components/Login.vue";
 import ForgotPassword from "@/domain/account/components/ForgotPassword.vue";
+import NotFound from "@/domain/system/components/NotFound.vue";
 
 const requiresAuthRoutes = [
   {
     path: "/",
+    name: "Home",
+    component: Dashboard,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: "/dashboard",
     name: "Dashboard",
     component: Dashboard,
     meta: { requiresAuth: true },
@@ -24,6 +31,10 @@ const guestRoutes = [
     name: "ForgotPassword",
     component: ForgotPassword,
   },
+  {
+    path: "/:pathMatch(.*)*",
+    component: NotFound,
+  },
 ];
 
 const router = createRouter({
@@ -38,14 +49,12 @@ router.beforeEach(async (to, from, next) => {
     try {
       const store = useRootStore();
 
-      await store.accountStore.accountLogin();
-
       const loginStatus = computed(
         () => store.accountStore.getAccountLogin.logged_in
       );
-
       if (loginStatus.value) {
         next();
+        return;
       }
       if (to.name !== "Login") {
         next({ name: "Login" });
