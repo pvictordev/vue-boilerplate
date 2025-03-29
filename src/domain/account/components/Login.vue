@@ -71,22 +71,22 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue"
-import { useRoute, useRouter } from "vue-router"
-import { useRootStore } from "@/stores/store"
-import { useVuelidate } from "@vuelidate/core"
-import { required, helpers, email } from "@vuelidate/validators"
+import { computed, ref } from "vue";
+import { useRouter } from "vue-router";
+import { useRootStore } from "@/stores/store";
+import { useVuelidate } from "@vuelidate/core";
+import { required, helpers, email } from "@vuelidate/validators";
 
-const store = useRootStore()
-const router = useRouter()
-const isLoading = computed(() => store.systemStore.getLoading)
-const loginStatus = computed(() => store.accountStore.getAccountLogin.logged_in)
+const store = useRootStore();
+const router = useRouter();
+const isLoading = computed(() => store.systemStore.getLoading);
 
-const submitted = ref(false)
+const submitted = ref(false);
+
 const formFields = ref({
-  email: "",
-  password: "",
-})
+  email: "admin@mail.com",
+  password: "1234",
+});
 const formRules = {
   email: {
     required: helpers.withMessage("*Email is required", required),
@@ -95,15 +95,23 @@ const formRules = {
   password: {
     required: helpers.withMessage("*Password is required", required),
   },
-}
-const v$ = useVuelidate(formRules, formFields)
+};
+
+const v$ = useVuelidate(formRules, formFields);
 const onSubmit = async (isFormValid) => {
-  submitted.value = true
+  submitted.value = true;
   if (!isFormValid) {
-    return
+    return;
   }
 
-  await store.accountStore.accountLogin()
-  router.push("/dashboard")
-}
+  if (
+    formFields.value.email === "admin@mail.com" &&
+    formFields.value.password === "1234"
+  ) {
+    await store.accountStore.accountLogin();
+    router.push("/dashboard");
+  } else {
+    alert("Invalid email or password");
+  }
+};
 </script>

@@ -22,9 +22,11 @@
     "sass": "1.77.8",
     "vue": "^3.5.13",
     "vue-axios": "^3.5.2",
+    "vue-i18n": "10",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^6.0.5",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.9",
     "@vitejs/plugin-vue": "^5.2.3",
