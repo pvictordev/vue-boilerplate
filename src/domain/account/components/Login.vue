@@ -4,7 +4,7 @@
       @submit.prevent="onSubmit(!v$.$invalid)"
       class="h-screen flex align-items-center justify-content-center"
     >
-      <div class="p-4 shadow-7 border-round w-3">
+      <div class="p-4 shadow-7 border-round w-24rem">
         <h2 class="text-center mb-4">Login</h2>
 
         <!-- Email Field -->
@@ -59,28 +59,34 @@
             class="w-full"
           />
         </div>
+
+        <div class="mt-2 text-sm">
+          <RouterLink to="/forgot-password"
+            >Did you forgot your password ?
+          </RouterLink>
+        </div>
       </div>
     </form>
   </div>
 </template>
 
-<script setup>
-import { computed, ref } from "vue";
-import { useRootStore } from "@/stores/store";
-import { useVuelidate } from "@vuelidate/core";
-import { required, helpers, email } from "@vuelidate/validators";
+<script setup lang="ts">
+import { computed, ref } from "vue"
+import { useRoute, useRouter } from "vue-router"
+import { useRootStore } from "@/stores/store"
+import { useVuelidate } from "@vuelidate/core"
+import { required, helpers, email } from "@vuelidate/validators"
 
-const store = useRootStore();
-const isLoading = computed(() => store.systemStore.getLoading);
-const loginStatus = computed(
-  () => store.accountStore.getAccountLogin.logged_in
-);
+const store = useRootStore()
+const router = useRouter()
+const isLoading = computed(() => store.systemStore.getLoading)
+const loginStatus = computed(() => store.accountStore.getAccountLogin.logged_in)
 
-const submitted = ref(false);
+const submitted = ref(false)
 const formFields = ref({
   email: "",
   password: "",
-});
+})
 const formRules = {
   email: {
     required: helpers.withMessage("*Email is required", required),
@@ -89,14 +95,15 @@ const formRules = {
   password: {
     required: helpers.withMessage("*Password is required", required),
   },
-};
-const v$ = useVuelidate(formRules, formFields);
+}
+const v$ = useVuelidate(formRules, formFields)
 const onSubmit = async (isFormValid) => {
-  submitted.value = true;
+  submitted.value = true
   if (!isFormValid) {
-    return;
+    return
   }
 
-  await store.accountStore.accountLogin();
-};
+  await store.accountStore.accountLogin()
+  router.push("/dashboard")
+}
 </script>
