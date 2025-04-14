@@ -5,6 +5,7 @@
         <h2 class="text-center mb-4">
           {{ t("welcome", { name: userName }) }}
         </h2>
+        {{ formattedDate }}
         <p>{{ t("doorOpen") }}</p>
         <LoadingAnimation />
       </div>
@@ -13,15 +14,17 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import { computed } from "vue";
 import { useRootStore } from "@/stores/store";
+import { returnFormattedDate } from "@/domain/account/helper";
 import LoadingAnimation from "@/domain/system/components/LoadingAnimation.vue";
-import { useI18n } from "vue-i18n";
 
 const store = useRootStore();
 const { t } = useI18n();
 
 const userName = computed(() => store.accountStore.getAccountLogin.user_name);
+const formattedDate = computed(() => returnFormattedDate(new Date()));
 </script>
 
 <i18n lang="json">
