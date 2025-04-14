@@ -1,6 +1,7 @@
 export interface AccountGenericData {
   logged_in: boolean;
   is_admin: boolean;
+  user_name: string;
 }
 
 export interface AccountState {
