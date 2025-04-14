@@ -1,15 +1,18 @@
+import type { AccountGenericData, AccountState } from "../types";
 import { accountLoginService } from "@/domain/account/service";
 import { useRootStore } from "@/stores/store";
 
 export const actions = {
-  async accountLogin() {
+  async accountLogin(
+    this: AccountState & { setAccountLogin: (data: AccountGenericData) => void }
+  ) {
     const store = useRootStore();
 
     try {
       store.systemStore.setLoading(true);
       const response = await accountLoginService();
 
-      if (response.success) {
+      if (response.success && response.data) {
         this.setAccountLogin(response.data);
       } else {
         store.systemStore.addToastMessage(
@@ -23,8 +26,7 @@ export const actions = {
       store.systemStore.setLoading(false);
     }
   },
-
-  setAccountLogin(state) {
-    this.accountGenericData = state;
+  setAccountLogin(this: AccountState, data: AccountGenericData) {
+    this.accountGenericData = data;
   },
 };

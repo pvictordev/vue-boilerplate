@@ -1,3 +1,4 @@
+import type { App } from "vue";
 import {
   InputText,
   InputNumber,
@@ -18,7 +19,7 @@ export default class UILibraryProvider {
     { name: "Button", component: Button },
     { name: "Dialog", component: Dialog },
   ];
-  provide(app) {
+  provide(app: App) {
     this.components.map(({ name, component }) =>
       app.component(name, component)
     );

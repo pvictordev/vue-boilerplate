@@ -1,9 +1,15 @@
+import type { SystemState, ToastMessageType } from "../types";
+
 export const actions = {
-  setLoading(isLoading) {
+  setLoading(this: SystemState, isLoading: boolean): void {
     this.loading = isLoading;
   },
 
-  addToastMessage(type, payload) {
+  addToastMessage(
+    this: SystemState,
+    type: ToastMessageType,
+    payload: string
+  ): void {
     this.$patch({
       toastMessage: {
         payload: payload,

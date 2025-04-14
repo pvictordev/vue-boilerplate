@@ -1,6 +1,8 @@
-import axios from "axios";
+import axios, { type AxiosStatic } from "axios";
+import type { App } from "vue";
 import VueAxios from "vue-axios";
 
+// statefull
 // axios.defaults.withCredentials = true;
 axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 const url = window.location.href;
@@ -12,7 +14,7 @@ if (url.includes("localhost")) {
 }
 
 export default class HTTPProvider {
-  provide(app) {
+  provide(app: App) {
     app.use(VueAxios, axios);
     this.boot();
   }

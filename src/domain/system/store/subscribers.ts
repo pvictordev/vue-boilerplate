@@ -1,17 +1,20 @@
 import { useRootStore } from "@/stores/store";
 import { useToast } from "primevue";
+import type { SystemState } from "../types";
 
 const createMessagingSubscriber = () => {
   const toast = useToast();
 
-  useRootStore().systemStore.$subscribe((mutation, state) => {
-    if (mutation.payload) {
-      switch (mutation.payload.toastMessage.type) {
+  useRootStore().systemStore.$subscribe((mutation, state: SystemState) => {
+    if (state.toastMessage) {
+      const { type, payload } = state.toastMessage;
+
+      switch (type) {
         case "ERROR":
           toast.add({
             severity: "error",
             summary: "Error",
-            detail: `${mutation.payload.toastMessage.payload}`,
+            detail: payload,
             life: 5000,
           });
           break;
@@ -20,7 +23,7 @@ const createMessagingSubscriber = () => {
           toast.add({
             severity: "success",
             summary: "Success",
-            detail: `${mutation.payload.toastMessage.payload}`,
+            detail: payload,
             life: 5000,
           });
           break;
@@ -29,7 +32,7 @@ const createMessagingSubscriber = () => {
           toast.add({
             severity: "warn",
             summary: "Warning",
-            detail: `${mutation.payload.toastMessage.payload}`,
+            detail: payload,
             life: 5000,
           });
           break;
@@ -38,7 +41,7 @@ const createMessagingSubscriber = () => {
           toast.add({
             severity: "info",
             summary: "Info",
-            detail: `${mutation.payload.toastMessage.payload}`,
+            detail: payload,
             life: 5000,
           });
           break;

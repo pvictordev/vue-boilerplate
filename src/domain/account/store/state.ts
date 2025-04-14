@@ -1,6 +1,8 @@
-export const state = {
+import type { AccountState } from "../types";
+
+export const state = (): AccountState => ({
   accountGenericData: {
     logged_in: false,
     is_admin: false,
   },
-};
+});

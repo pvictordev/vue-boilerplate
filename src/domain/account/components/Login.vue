@@ -17,13 +17,7 @@
             v-model="v$.email.$model"
             class="w-full"
           />
-          <small
-            v-if="
-              (v$.email.required.$invalid && submitted) ||
-              v$.email.$pending.$response
-            "
-            class="p-error"
-          >
+          <small v-if="v$.email.required.$invalid && submitted" class="p-error">
             {{ v$.email.required.$message }}
           </small>
         </div>
@@ -40,10 +34,7 @@
             class="w-full"
           />
           <small
-            v-if="
-              (v$.password.required.$invalid && submitted) ||
-              v$.password.$pending.$response
-            "
+            v-if="v$.password.required.$invalid && submitted"
             class="p-error"
           >
             {{ v$.password.required.$message }}
@@ -98,7 +89,7 @@ const formRules = {
 };
 
 const v$ = useVuelidate(formRules, formFields);
-const onSubmit = async (isFormValid) => {
+const onSubmit = async (isFormValid: boolean) => {
   submitted.value = true;
   if (!isFormValid) {
     return;

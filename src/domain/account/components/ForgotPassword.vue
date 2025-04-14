@@ -19,8 +19,7 @@
           />
           <small
             v-if="
-              (v$.email.required.$invalid && submitted) ||
-              v$.email.$pending.$response
+              (v$.email.required.$invalid && submitted) || v$.email.$pending
             "
             class="p-error"
           >
@@ -68,11 +67,10 @@ const formRules = {
   },
 };
 const v$ = useVuelidate(formRules, formFields);
-const onSubmit = async (isFormValid) => {
+const onSubmit = async (isFormValid: boolean) => {
   submitted.value = true;
   if (!isFormValid) {
     return;
   }
-  console.log(formFields.value);
 };
 </script>
