@@ -568,12 +568,12 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.28.tgz#d45e01c4a56f143ee69c54dd6b12eade9e270a73"
   integrity sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==
 
-"@primeuix/styled@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@primeuix/styled/-/styled-0.5.0.tgz#90fc8a0930732c91a2ffacc489b3ddd5b7eccf60"
-  integrity sha512-k5CTQ+10cXIXxZTep7sktmYe8lJkjmUaFVDAc1OCsWTJR+bhBy/s6zWIatGljVtuf3RmTSxtlrHQeFLjPmdUNQ==
+"@primeuix/styled@^0.5.0", "@primeuix/styled@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@primeuix/styled/-/styled-0.5.1.tgz#0b21a2dd58fc50ebc80567ec6326e8ba6ea4f5b2"
+  integrity sha512-5Ftw/KSauDPClQ8F2qCyCUF7cIUEY4yLNikf0rKV7Vsb8zGYNK0dahQe7CChaR6M2Kn+NA2DSBSk76ZXqj6Uog==
   dependencies:
-    "@primeuix/utils" "^0.5.0"
+    "@primeuix/utils" "^0.5.3"
 
 "@primeuix/styles@^1.0.0":
   version "1.0.0"
@@ -582,17 +582,22 @@
   dependencies:
     "@primeuix/styled" "^0.5.0"
 
-"@primeuix/themes@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@primeuix/themes/-/themes-1.0.0.tgz#5af2a2d1593503ca4a0f82d04ff9e946dd269362"
-  integrity sha512-fxUgcAP9H6FeytbE8c4QvRt8aBnoyZJqvtnnVwHT8PHr1dNSnC1nYKGrXpebcx3SpNy9Hp9oVidGsl6u61+pXQ==
+"@primeuix/themes@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@primeuix/themes/-/themes-1.0.3.tgz#8f3e84901349804730f69359fc854bd001fe6c1a"
+  integrity sha512-f/1qadrv5TFMHfvtVv4Y9zjrkeDP2BO/cuzbHBO9DYxKL6YBIPT9BjKec2K4Kg8PcfGm6CAvxAvICadJSWejRw==
   dependencies:
-    "@primeuix/styled" "^0.5.0"
+    "@primeuix/styled" "^0.5.1"
 
-"@primeuix/utils@^0.5.0", "@primeuix/utils@^0.5.1":
+"@primeuix/utils@^0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@primeuix/utils/-/utils-0.5.1.tgz#7bca8a849f1d4d050f4d6a4bb8a179d0b0c2e99f"
   integrity sha512-/bYirtF3gJOGrRQfQ5tUyQOLEria7wg/UCqvpIydTAxLmj/UWgWwh2kAjYVp49eldm1+2sk4+TDkbAz8XcPpew==
+
+"@primeuix/utils@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@primeuix/utils/-/utils-0.5.3.tgz#3a6f597f88e6e9ff8993e81a25c2dfcdd787fd71"
+  integrity sha512-7SGh7734wcF1/uK6RzO6Z6CBjGQ97GDHfpyl2F1G/c7R0z9hkT/V72ypDo82AWcCS7Ta07oIjDpOCTkSVZuEGQ==
 
 "@primevue/core@4.3.3":
   version "4.3.3"
