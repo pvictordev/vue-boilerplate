@@ -901,10 +901,10 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-4.0.0.tgz#abb11d99aeb6d27f1b563c38147a72d50058e339"
   integrity sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==
 
-"@tsconfig/node22@^22.0.1":
-  version "22.0.1"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node22/-/node22-22.0.1.tgz#27e3ee9b359e31e5b94690bf2bad5a923c1d57d0"
-  integrity sha512-VkgOa3n6jvs1p+r3DiwBqeEwGAwEvnVCg/hIjiANl5IEcqP3G0u5m8cBJspe1t9qjZRlZ7WFgqq5bJrGdgAKMg==
+"@tsconfig/node22@^22.0.2":
+  version "22.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node22/-/node22-22.0.2.tgz#1e04e2c5cc946dac787d69bb502462a851ae51b6"
+  integrity sha512-Kmwj4u8sDRDrMYRoN9FDEcXD8UpBSaPQQ24Gz+Gamqfm7xxn+GBR7ge/Z7pK8OXNGyUzbSwJj+TH6B+DS/epyA==
 
 "@types/estree@1.0.7":
   version "1.0.7"
@@ -1119,13 +1119,13 @@
   dependencies:
     "@vue/devtools-kit" "^7.7.2"
 
-"@vue/devtools-core@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-core/-/devtools-core-8.0.0.tgz#590ce86e6b9b21729e7f454a4a1ddff144bc6520"
-  integrity sha512-5bPtF0jAFnaGs4C/4+3vGRR5U+cf6Y8UWK0nJflutEDGepHxl5L9JRaPdHQYCUgrzUaf4cY4waNBEEGXrfcs3A==
+"@vue/devtools-core@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-core/-/devtools-core-8.0.2.tgz#85807f93d0f5540335818db1f6d346c7c6724d72"
+  integrity sha512-V7eKTTHoS6KfK8PSGMLZMhGv/9yNDrmv6Qc3r71QILulnzPnqK2frsTyx3e2MrhdUZnENPEm6hcb4z0GZOqNhw==
   dependencies:
-    "@vue/devtools-kit" "^8.0.0"
-    "@vue/devtools-shared" "^8.0.0"
+    "@vue/devtools-kit" "^8.0.2"
+    "@vue/devtools-shared" "^8.0.2"
     mitt "^3.0.1"
     nanoid "^5.1.5"
     pathe "^2.0.3"
@@ -1144,16 +1144,16 @@
     speakingurl "^14.0.1"
     superjson "^2.2.1"
 
-"@vue/devtools-kit@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-kit/-/devtools-kit-8.0.0.tgz#ebe37a37dec8ea954740e6ac2f627afd2a71e829"
-  integrity sha512-b11OeQODkE0bctdT0RhL684pEV2DPXJ80bjpywVCbFn1PxuL3bmMPDoJKjbMnnoWbrnUYXYzFfmMWBZAMhORkQ==
+"@vue/devtools-kit@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-kit/-/devtools-kit-8.0.2.tgz#393d4db3c4160c83b46d2e24f662aad556cbbf17"
+  integrity sha512-yjZKdEmhJzQqbOh4KFBfTOQjDPMrjjBNCnHBvnTGJX+YLAqoUtY2J+cg7BE+EA8KUv8LprECq04ts75wCoIGWA==
   dependencies:
-    "@vue/devtools-shared" "^8.0.0"
+    "@vue/devtools-shared" "^8.0.2"
     birpc "^2.5.0"
     hookable "^5.5.3"
     mitt "^3.0.1"
-    perfect-debounce "^1.0.0"
+    perfect-debounce "^2.0.0"
     speakingurl "^14.0.1"
     superjson "^2.2.2"
 
@@ -1164,10 +1164,10 @@
   dependencies:
     rfdc "^1.4.1"
 
-"@vue/devtools-shared@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-shared/-/devtools-shared-8.0.0.tgz#39c096d8eb675c0a6d4c6edd0c001573c994ee01"
-  integrity sha512-jrKnbjshQCiOAJanoeJjTU7WaCg0Dz2BUal6SaR6VM/P3hiFdX5Q6Pxl73ZMnrhCxNK9nAg5hvvRGqs+6dtU1g==
+"@vue/devtools-shared@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-shared/-/devtools-shared-8.0.2.tgz#99cd10b06e14e1e549f3a1b623adae46f7b1bc3b"
+  integrity sha512-mLU0QVdy5Lp40PMGSixDw/Kbd6v5dkQXltd2r+mdVQV7iUog2NlZuLxFZApFZ/mObUBDhoCpf0T3zF2FWWdeHw==
   dependencies:
     rfdc "^1.4.1"
 
@@ -2077,6 +2077,11 @@ perfect-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/perfect-debounce/-/perfect-debounce-1.0.0.tgz#9c2e8bc30b169cc984a58b7d5b28049839591d2a"
   integrity sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==
 
+perfect-debounce@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/perfect-debounce/-/perfect-debounce-2.0.0.tgz#0ff94f1ecbe0a6bca4b1703a2ed08bbe43739aa7"
+  integrity sha512-fkEH/OBiKrqqI/yIgjR92lMfs2K8105zt/VT6+7eTjNwisrsh47CeIED9z58zI7DfKdH3uHAn25ziRZn3kgAow==
+
 picocolors@^1.0.0, picocolors@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
@@ -2272,10 +2277,10 @@ signal-exit@^4.1.0:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
-sirv@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/sirv/-/sirv-3.0.1.tgz#32a844794655b727f9e2867b777e0060fbe07bf3"
-  integrity sha512-FoqMu0NCGBLCcAkS1qA+XJIQTR6/JHfQXl+uGteNCQ76T91DMUjPa9xfmeqMY3z80nLSg9yQmNjK0Px6RWsH/A==
+sirv@^3.0.1, sirv@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-3.0.2.tgz#f775fccf10e22a40832684848d636346f41cd970"
+  integrity sha512-2wcC/oGxHis/BoHkkPwldgiPSYcpZK3JU28WoMVv55yHJgcZ8rlXvuG9iZggz+sU1d4bRgIGASwyWqjxu3FM0g==
   dependencies:
     "@polka/url" "^1.0.0-next.24"
     mrmime "^2.0.0"
@@ -2348,13 +2353,13 @@ unicorn-magic@^0.3.0:
   resolved "https://registry.yarnpkg.com/unicorn-magic/-/unicorn-magic-0.3.0.tgz#4efd45c85a69e0dd576d25532fbfa22aa5c8a104"
   integrity sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==
 
-unplugin-utils@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/unplugin-utils/-/unplugin-utils-0.2.4.tgz#56e4029a6906645a10644f8befc404b06d5d24d0"
-  integrity sha512-8U/MtpkPkkk3Atewj1+RcKIjb5WBimZ/WSLhhR3w6SsIj8XJuKTacSP8g+2JhfSGw0Cb125Y+2zA/IzJZDVbhA==
+unplugin-utils@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/unplugin-utils/-/unplugin-utils-0.3.0.tgz#fbda011a03a0e40e168f0eb9925ea7d2750e4ea8"
+  integrity sha512-JLoggz+PvLVMJo+jZt97hdIIIZ2yTzGgft9e9q8iMrC4ewufl62ekeW7mixBghonn2gVb/ICjyvlmOCUBnJLQg==
   dependencies:
-    pathe "^2.0.2"
-    picomatch "^4.0.2"
+    pathe "^2.0.3"
+    picomatch "^4.0.3"
 
 unplugin@^2.3.4:
   version "2.3.10"
@@ -2387,32 +2392,32 @@ vite-hot-client@^2.1.0:
   resolved "https://registry.yarnpkg.com/vite-hot-client/-/vite-hot-client-2.1.0.tgz#88f8469875e0121eae2f460cbf35cb528c049961"
   integrity sha512-7SpgZmU7R+dDnSmvXE1mfDtnHLHQSisdySVR7lO8ceAXvM0otZeuQQ6C8LrS5d/aYyP/QZ0hI0L+dIPrm4YlFQ==
 
-vite-plugin-inspect@^11.3.0:
-  version "11.3.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-11.3.2.tgz#58b129ff0bd38f18c22204ef2c36e1d590d54c6e"
-  integrity sha512-nzwvyFQg58XSMAmKVLr2uekAxNYvAbz1lyPmCAFVIBncCgN9S/HPM+2UM9Q9cvc4JEbC5ZBgwLAdaE2onmQuKg==
+vite-plugin-inspect@^11.3.3:
+  version "11.3.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-inspect/-/vite-plugin-inspect-11.3.3.tgz#2b9c4db9574c59ebcf9647b37bb4eb5c5596b3be"
+  integrity sha512-u2eV5La99oHoYPHE6UvbwgEqKKOQGz86wMg40CCosP6q8BkB6e5xPneZfYagK4ojPJSj5anHCrnvC20DpwVdRA==
   dependencies:
     ansis "^4.1.0"
     debug "^4.4.1"
     error-stack-parser-es "^1.0.5"
     ohash "^2.0.11"
     open "^10.2.0"
-    perfect-debounce "^1.0.0"
+    perfect-debounce "^2.0.0"
     sirv "^3.0.1"
-    unplugin-utils "^0.2.4"
+    unplugin-utils "^0.3.0"
     vite-dev-rpc "^1.1.0"
 
-vite-plugin-vue-devtools@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-vue-devtools/-/vite-plugin-vue-devtools-8.0.0.tgz#2ffb83491b2761801ae0cde3a3aa21205e3f0f12"
-  integrity sha512-9bWQig8UMu3nPbxX86NJv56aelpFYoBHxB5+pxuQz3pa3Tajc1ezRidj/0dnADA4/UHuVIfwIVYHOvMXYcPshg==
+vite-plugin-vue-devtools@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-vue-devtools/-/vite-plugin-vue-devtools-8.0.2.tgz#f9989e3b7eb6c253e282f6ecd8304a71ed238c42"
+  integrity sha512-1069qvMBcyAu3yXQlvYrkwoyLOk0lSSR/gTKy/vy+Det7TXnouGei6ZcKwr5TIe938v/14oLlp0ow6FSJkkORA==
   dependencies:
-    "@vue/devtools-core" "^8.0.0"
-    "@vue/devtools-kit" "^8.0.0"
-    "@vue/devtools-shared" "^8.0.0"
+    "@vue/devtools-core" "^8.0.2"
+    "@vue/devtools-kit" "^8.0.2"
+    "@vue/devtools-shared" "^8.0.2"
     execa "^9.6.0"
-    sirv "^3.0.1"
-    vite-plugin-inspect "^11.3.0"
+    sirv "^3.0.2"
+    vite-plugin-inspect "^11.3.3"
     vite-plugin-vue-inspector "^5.3.2"
 
 vite-plugin-vue-inspector@^5.3.2:
