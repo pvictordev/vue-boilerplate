@@ -1,9 +1,9 @@
-import axios from "axios"
+import { http } from "@/providers/HTTPProvider";
 
 const accountLoginService = async () => {
-  return axios
-    .get("/8a9d2de1-33cc-43e7-887e-39f9671a8462")
-    .then((response) => response.data)
-}
+  return http
+    .get("/4fecaa48-1a2d-4746-8a76-6d910405f06f")
+    .then((response) => response.data);
+};
 
-export { accountLoginService }
+export { accountLoginService };

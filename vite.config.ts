@@ -11,7 +11,8 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     VueI18nPlugin({
-      include: [path.resolve(__dirname, "./src/**/*.vue")], // Only process .vue files
+      // include: [path.resolve(__dirname, "./src/**/*.vue")], // Only process .vue files
+      include: path.resolve(__dirname, "./src/locales/**"),
       exclude: [path.resolve(__dirname, "./src/main.ts")], // Explicitly exclude main.ts
       compositionOnly: true,
     }),
