@@ -5,7 +5,7 @@
   >
     <nav class="flex justify-content-end">
       <ul class="flex gap-3">
-        <li v-show="loginStatus">Dashboard</li>
+        <li v-show="loginStatus">{{ $t("system.header.dashboard") }}</li>
       </ul>
     </nav>
     <LanguageSwitcher />

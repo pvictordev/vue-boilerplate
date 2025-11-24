@@ -3,7 +3,7 @@
     class="flex justify-center items-center py-3 pl-3 text-white"
     :style="{ backgroundColor: randomColor }"
   >
-    <span> © {{ currentYear }} Vue Boilerplate </span>
+    <span>{{ $t("system.footer.copyright", { year: currentYear }) }}</span>
   </footer>
 </template>
 

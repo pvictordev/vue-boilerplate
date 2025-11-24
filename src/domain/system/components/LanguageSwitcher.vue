@@ -7,29 +7,33 @@
       :class="{ active: currentLocale === lang.code }"
       class="p-2 m-1 border-round"
     >
-      {{ lang.name }}
+      {{ $t(lang.nameKey) }}
     </button>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, watch } from "vue";
 import { useI18n } from "vue-i18n";
-
-onMounted(() => {});
 
 const { locale } = useI18n();
 
 const currentLocale = computed(() => locale.value);
 
 const availableLanguages = ref([
-  { code: "en", name: "English" },
-  { code: "fr", name: "Français" },
+  { code: "en", nameKey: "system.languageSwitcher.english" },
+  { code: "fr", nameKey: "system.languageSwitcher.french" },
 ]);
 
 const switchLanguage = (langCode) => {
   locale.value = langCode;
+  localStorage.setItem("locale", langCode);
 };
+
+// Watch for locale changes and persist to localStorage
+watch(locale, (newLocale) => {
+  localStorage.setItem("locale", newLocale);
+});
 </script>
 
 <style scoped>
