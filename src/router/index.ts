@@ -1,9 +1,8 @@
 import { computed } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { useRootStore } from "@/stores/store";
-import Dashboard from "@/domain/account/components/Dashboard.vue";
-import Login from "@/domain/account/components/Login.vue";
-import ForgotPassword from "@/domain/account/components/ForgotPassword.vue";
+import Dashboard from "@/domain/dashboard/components/Dashboard.vue";
+import Auth from "@/domain/auth/components/Auth.vue";
 import NotFound from "@/domain/system/components/NotFound.vue";
 
 const requiresAuthRoutes = [
@@ -22,14 +21,9 @@ const requiresAuthRoutes = [
 ];
 const guestRoutes = [
   {
-    path: "/login",
-    name: "Login",
-    component: Login,
-  },
-  {
-    path: "/forgot-password",
-    name: "ForgotPassword",
-    component: ForgotPassword,
+    path: "/auth",
+    name: "Auth",
+    component: Auth,
   },
   {
     path: "/:pathMatch(.*)*",
@@ -49,15 +43,13 @@ router.beforeEach(async (to, from, next) => {
     try {
       const store = useRootStore();
 
-      const loginStatus = computed(
-        () => store.accountStore.getAccountLogin.logged_in
-      );
+      const loginStatus = computed(() => store.authStore.getLogin.logged_in);
       if (loginStatus.value) {
         next();
         return;
       }
-      if (to.name !== "Login") {
-        next({ name: "Login" });
+      if (to.name !== "Auth") {
+        next({ name: "Auth" });
         return;
       } else {
         next();

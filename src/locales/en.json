@@ -2,6 +2,7 @@
   "auth": {
     "login": {
       "title": "Login",
+      "subtitle": "Enter your email and password",
       "email": "Email",
       "password": "Password",
       "emailPlaceholder": "Enter your email",
@@ -12,8 +13,14 @@
       "passwordRequired": "*Password is required",
       "invalidCredentials": "Invalid email or password"
     },
+    "register": {
+      "title": "Register",
+      "subtitle": "Create an account to get started",
+      "registerButton": "Register"
+    },
     "forgotPassword": {
       "title": "Forgot password",
+      "subtitle": "Enter your email to reset your password",
       "email": "Email",
       "emailPlaceholder": "Enter your email",
       "submitButton": "Submit",

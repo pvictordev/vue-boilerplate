@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="flex justify-center items-center py-3 pl-3 text-white"
+    class="flex justify-center items-center py-[16px] text-white"
     :style="{ backgroundColor: randomColor }"
   >
     <span>{{ $t("system.footer.copyright", { year: currentYear }) }}</span>

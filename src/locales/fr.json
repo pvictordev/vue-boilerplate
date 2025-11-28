@@ -2,6 +2,7 @@
   "auth": {
     "login": {
       "title": "Connexion",
+      "subtitle": "Entrez vos identifiants pour accéder à votre compte",
       "email": "E-mail",
       "password": "Mot de passe",
       "emailPlaceholder": "Entrez votre e-mail",
@@ -12,8 +13,14 @@
       "passwordRequired": "*Le mot de passe est requis",
       "invalidCredentials": "E-mail ou mot de passe invalide"
     },
+    "register": {
+      "title": "S'inscrire",
+      "subtitle": "Créez un compte pour commencer",
+      "registerButton": "S'inscrire"
+    },
     "forgotPassword": {
       "title": "Mot de passe oublié",
+      "subtitle": "Entrez votre e-mail pour réinitialiser votre mot de passe",
       "email": "E-mail",
       "emailPlaceholder": "Entrez votre e-mail",
       "submitButton": "Soumettre",

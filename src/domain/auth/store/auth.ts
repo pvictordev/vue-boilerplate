@@ -1,15 +1,15 @@
-import type { AccountState } from "../types";
+import type { AuthState } from "../types";
 import { defineStore } from "pinia";
 import { state } from "./state";
 import { actions } from "./actions";
 import { getters } from "./getters";
 
-export const useAccountStore = defineStore<
-  "account",
-  AccountState,
+export const useAuthStore = defineStore<
+  "auth",
+  AuthState,
   typeof getters,
   typeof actions
->("account", {
+>("auth", {
   state,
   getters,
   actions,

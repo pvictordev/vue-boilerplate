@@ -1,13 +1,13 @@
 import { defineStore } from "pinia";
-import { useAccountStore } from "@/domain/account/store/account";
+import { useAuthStore } from "@/domain/auth/store/auth";
 import { useSystemStore } from "@/domain/system/store/system";
 
 export const useRootStore = defineStore("store", () => {
-  const accountStore = useAccountStore();
+  const authStore = useAuthStore();
   const systemStore = useSystemStore();
 
   return {
-    accountStore,
+    authStore,
     systemStore,
   };
 });

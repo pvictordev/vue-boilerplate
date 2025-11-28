@@ -1,16 +1,16 @@
-import type { AccountGenericData, AccountState } from "../types";
-import { accountLoginService } from "@/domain/account/service";
+import type { AuthGenericData, AuthState } from "../types";
+import { loginService } from "@/domain/auth/service";
 import { useRootStore } from "@/stores/store";
 
 export const actions = {
-  async accountLogin(
-    this: AccountState & { setAccountLogin: (data: AccountGenericData) => void }
+  async login(
+    this: AuthState & { setAccountLogin: (data: AuthGenericData) => void }
   ) {
     const store = useRootStore();
 
     try {
       store.systemStore.setLoading(true);
-      const response = await accountLoginService();
+      const response = await loginService();
 
       if (response.success && response.data) {
         this.setAccountLogin(response.data);
@@ -26,7 +26,7 @@ export const actions = {
       store.systemStore.setLoading(false);
     }
   },
-  setAccountLogin(this: AccountState, data: AccountGenericData) {
-    this.accountGenericData = data;
+  setAccountLogin(this: AuthState, data: AuthGenericData) {
+    this.authGenericData = data;
   },
 };
