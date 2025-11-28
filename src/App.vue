@@ -1,6 +1,7 @@
 <template>
   <Toast />
   <Header />
+
   <main>
     <RouterView />
   </main>
@@ -14,7 +15,7 @@ import { createMessagingSubscriber } from "@/domain/system/store/subscribers";
 import Header from "@/domain/system/components/Header.vue";
 import Footer from "@/domain/system/components/Footer.vue";
 
-onMounted(async () => {
+onMounted(() => {
   createMessagingSubscriber();
 });
 </script>

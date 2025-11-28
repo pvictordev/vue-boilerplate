@@ -13,7 +13,7 @@ A rock-solid foundation to build a SPA for your next project with Vue 3 with Typ
 ### UI & Styling
 
 - **PrimeVue** - Rich UI component library
-- **PrimeFlex** - Utility-first CSS framework
+- **Tailwind CSS** - Utility-first CSS framework
 - **PrimeIcons** - Icon library
 - **SCSS** - Advanced styling capabilities
 

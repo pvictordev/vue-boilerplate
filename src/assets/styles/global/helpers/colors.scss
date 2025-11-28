@@ -1,0 +1,19 @@
+.h- {
+  &bg- {
+    &primary {
+      background-color: $color-primary;
+    }
+    &danger {
+      background-color: $color-danger;
+    }
+    &primary {
+      background-color: $color-primary;
+    }
+  }
+}
+
+$breakpoints: (
+  "mobile": 575px,
+  "tablet": 768px,
+  "desktop": 990px,
+);
